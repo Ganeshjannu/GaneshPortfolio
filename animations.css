@@ -1,0 +1,246 @@
+/* ═══════════════════════════════════════════════════════════
+   animations.css  — Ganesh Jannu Portfolio
+   Pure motion layer. Zero layout / spacing / design changes.
+═══════════════════════════════════════════════════════════ */
+
+
+/* ─── 1. KEYFRAMES ──────────────────────────────────────── */
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes floatY {
+  0%,100% { transform: translateY(0);    }
+  50%      { transform: translateY(-10px); }
+}
+
+@keyframes spinSlow {
+  from { transform: rotate(0deg);   }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes navbarSlide {
+  from { opacity: 0; transform: translateY(-16px); }
+  to   { opacity: 1; transform: translateY(0);     }
+}
+
+
+
+/* ─── 2. HERO — staggered entrance ─────────────────────── */
+
+/* Navbar */
+.navbar-outer {
+  animation: navbarSlide 500ms ease both;
+}
+
+/* Each hero text element comes in with a stagger */
+.hero-hi {
+  opacity: 0;
+  animation: fadeUp 600ms ease 100ms both;
+}
+.hero-name {
+  opacity: 0;
+  animation: fadeUp 600ms ease 220ms both;
+}
+.hero-role {
+  opacity: 0;
+  animation: fadeUp 600ms ease 340ms both;
+}
+.hero-tagline {
+  opacity: 0;
+  animation: fadeUp 600ms ease 460ms both;
+}
+.hero-meta {
+  opacity: 0;
+  animation: fadeUp 600ms ease 580ms both;
+}
+
+/* Profile image: static — no animation */
+
+/* Luminosity ring: static — no animation */
+
+/* Hero right group fades in */
+.hero-right {
+  opacity: 0;
+  animation: fadeIn 800ms ease 400ms both;
+}
+
+
+/* ─── 3. SCROLL REVEAL — base state ───────────────────── */
+/*
+   JS adds .is-visible when element enters viewport.
+   Elements start hidden; no flash before JS runs because
+   we use the .reveal class (only added via JS to elements
+   that should animate).
+*/
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 600ms ease, transform 600ms ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger children inside a reveal group */
+.reveal-group > * {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 500ms ease, transform 500ms ease;
+}
+.reveal-group.is-visible > *:nth-child(1) { opacity:1; transform:none; transition-delay:  0ms; }
+.reveal-group.is-visible > *:nth-child(2) { opacity:1; transform:none; transition-delay:120ms; }
+.reveal-group.is-visible > *:nth-child(3) { opacity:1; transform:none; transition-delay:240ms; }
+.reveal-group.is-visible > *:nth-child(4) { opacity:1; transform:none; transition-delay:360ms; }
+.reveal-group.is-visible > *:nth-child(5) { opacity:1; transform:none; transition-delay:480ms; }
+.reveal-group.is-visible > *:nth-child(6) { opacity:1; transform:none; transition-delay:600ms; }
+
+
+/* ─── 4. WORK EXPERIENCE — animated left border  ────────*/
+
+/* Fake timeline bar on the left of work-entries */
+.work-entries {
+  position: relative;
+}
+
+.work-entries::before {
+  content: '';
+  position: absolute;
+  left: -28px;
+  top: 0;
+  width: 2px;
+  height: 0;               /* starts at 0, grows to 100% via JS */
+  background: linear-gradient(to bottom, #ec0b43 0%, rgba(18,14,30,0.12) 100%);
+  border-radius: 2px;
+  transition: height 1200ms ease;
+}
+
+.work-entries.is-visible::before {
+  height: 100%;
+}
+
+
+/* ─── 5. CASE STUDY CARDS — hover interactions ──────────*/
+
+.case-card {
+  transition: transform 300ms ease, box-shadow 300ms ease;
+  cursor: pointer;
+}
+
+.case-card:hover {
+  transform: translateY(-6px) scale(1.012);
+  box-shadow: 0px 16px 40px rgba(0,0,0,0.28);
+}
+
+/* Image zoom on hover */
+.case-card-img-wrap {
+  overflow: hidden;
+}
+
+.case-card-img-wrap img,
+.case-card-img-wrap .case-card-img-center {
+  transition: transform 400ms ease;
+}
+
+.case-card:hover .case-card-img-wrap img,
+.case-card:hover .case-card-img-center {
+  transform: scale(1.05);
+}
+
+/* Read Case Study CTA — hidden by default, reveals on card hover */
+.read-btn {
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 250ms ease, transform 250ms ease;
+}
+
+.case-card:hover .read-btn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* ─── 6. STACK ICONS — hover lift ───────────────────────*/
+
+.stack-item {
+  transition: transform 250ms ease;
+}
+
+.stack-item:hover {
+  transform: translateY(-8px);
+}
+
+.stack-icon {
+  transition: transform 250ms ease;
+}
+
+.stack-item:hover .stack-icon {
+  transform: scale(1.06);
+}
+
+
+/* ─── 7. NAVBAR buttons hover ───────────────────────────*/
+
+.btn-linkedin {
+  transition: background 200ms ease, border-color 200ms ease;
+}
+.btn-linkedin:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+.btn-cv {
+  transition: filter 200ms ease, transform 200ms ease;
+}
+.btn-cv:hover {
+  filter: brightness(1.12);
+  transform: translateY(-1px);
+}
+
+
+/* ─── 8. BEHANCE CTA hover ──────────────────────────────*/
+
+.behance-cta {
+  transition: box-shadow 300ms ease, transform 300ms ease;
+  cursor: pointer;
+}
+.behance-cta:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.18);
+}
+
+.behance-btn {
+  transition: background 200ms ease, transform 200ms ease;
+}
+.behance-cta:hover .behance-btn {
+  background: rgba(255,255,255,0.08);
+  transform: translateY(-1px);
+}
+
+
+/* ─── 10. CONTACT section interactive buttons ───────────*/
+
+.contact-linkedin {
+  transition: transform 250ms ease, filter 250ms ease;
+  cursor: pointer;
+}
+.contact-linkedin:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.15);
+}
+
+.contact-email-btn {
+  transition: background 200ms ease, transform 200ms ease;
+}
+.contact-email-btn:hover {
+  background: #d4d4d4;
+  transform: translateY(-2px);
+}

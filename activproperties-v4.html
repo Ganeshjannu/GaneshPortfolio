@@ -5,6 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>ActivProperties Case Study</title>
 <link href="https://fonts.googleapis.com/css2?family=Alike&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet"/>
+  <!-- Portfolio Design System Override -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./case-study.css" />
 <style>
 :root{
   --brand:#6840ED;--accent:#F1A027;--dark:#1D252C;--mid:#566F80;
@@ -268,14 +273,22 @@ section:nth-child(odd) .stat-card{background:#f8f6ff;border-color:#d4c8ff;}
 .footer h2{font-family:'Alike',serif;font-size:30px;color:white;margin-bottom:10px;font-weight:400;}
 .footer p{color:var(--light);font-size:15px;margin:0;}
 
+/* BACK BAR */
+.back-bar { padding: 14px 40px; background: var(--white); border-bottom: 1px solid rgba(29,37,44,0.09); }
+.back-bar a { font-size: 13px; font-weight: 600; color: var(--mid); text-decoration: none; transition: color .2s; }
+.back-bar a:hover { color: var(--brand); }
+
 @media(max-width:768px){
   .persona-grid,.role-compare,.decision-row,.empathy-grid,.flow-cols,.wf-grid{grid-template-columns:1fr;}
   .d-arrow{transform:rotate(90deg);}
   .wf-inner{height:auto;flex-direction:column;}
+  .back-bar { padding: 14px 24px; }
 }
 </style>
 </head>
 <body>
+
+<div class="back-bar"><a href="index.html">← Back to Portfolio</a></div>
 
 <!-- HERO -->
 <div class="hero">
@@ -486,7 +499,7 @@ section:nth-child(odd) .stat-card{background:#f8f6ff;border-color:#d4c8ff;}
     <div class="section-label">Phase 3 — Empathy Mapping</div>
     <h2>Thinking Through Their Experience</h2>
     <div class="divider"></div>
-    <p>Personas tell you who someone is. Empathy maps help you think through what it actually feels like to be that person using your product. I mapped both users across what they think, feel, say, and do inside the platform, along with what causes them pain and what would genuinely make their day easier.</p>
+    <p>h I mapped both users across what they think, feel, say, and do inside the platform, along with what causes them pain and what would genuinely make their day easier.</p>
 
     <h3 style="font-size:18px;margin-bottom:4px;">Omar's experience as admin</h3>
     <p style="font-size:14px;color:var(--mid);margin-bottom:14px;">Carrying the whole operation on his shoulders every day.</p>
@@ -518,7 +531,7 @@ section:nth-child(odd) .stat-card{background:#f8f6ff;border-color:#d4c8ff;}
     <div class="section-label">Phase 4 — User Flows</div>
     <h2>Mapping How Each Person Moves Through the Product</h2>
     <div class="divider"></div>
-    <p>Before deciding on layouts or navigation, I mapped the two most important journeys in the product. The admin flow covers how Omar goes from logging in to reviewing a deal and checking on his agents. The agent flow covers how Sara goes from picking up a new lead all the way to submitting a deal. These flows were built directly from the BRD logic and shaped every structural decision that came after.</p>
+    <p>Before deciding on layouts or navigation, I mapped the two most important journeys in the product. The admin flow covers how Omar goes from logging in to reviewing a deal and checking on his agents. The agent flow covers how Sara goes from picking up a new lead all the way to submitting a deal.</p>
 
     <div class="flow-cols">
       <!-- ADMIN FLOW -->
@@ -933,5 +946,8 @@ section:nth-child(odd) .stat-card{background:#f8f6ff;border-color:#d4c8ff;}
   </div>
 </div>
 
+
+<!-- Portfolio Design System Animations -->
+<script src="./case-study.js"></script>
 </body>
 </html>
