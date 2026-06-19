@@ -13,6 +13,7 @@ import imgImage14 from "../imports/Desktop3/ca17433acb3b5d2d08f55099d5e77de9fc15
 import imgImage16 from "../imports/Desktop3/250d03996336c669335c43c7264dacb8c7d433e4.png";
 import imgImage17 from "../imports/Desktop3/9f15350abbfe7a57ee482bcf2b6685551844b9f7.png";
 import imgImage20 from "../imports/Desktop3/14d1c6ba692e5f7a1346350ef2a6df42c9a13c5a.png";
+import imgMoei from "../../assets/images/MOEI.png";
 
 /* ─── NAVBAR ─── */
 function Navbar() {
@@ -517,31 +518,37 @@ function CaseStudiesSection() {
               </div>
             </div>
 
-            {/* Taqa Water – narrow */}
-            <div
+            {/* MOEI – narrow */}
+            <a
+              href="./assets/Case study/MOEI CASE STUDY (2).pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex flex-col"
-              style={{ flex: 1, borderRadius: 32.925, boxShadow: "0px 1px 6px 0px rgba(0,0,0,0.16)", overflow: "hidden" }}
+              style={{ flex: 1, borderRadius: 32.925, boxShadow: "0px 1px 6px 0px rgba(0,0,0,0.16)", overflow: "hidden", textDecoration: "none" }}
             >
               <div
                 className="relative overflow-hidden flex items-end justify-center"
                 style={{ height: 359, borderRadius: "32px 32px 0 0", background: "linear-gradient(108.932deg,rgb(131,132,134) 1.87%,rgb(53,52,53) 100%)" }}
               >
                 <div className="flex items-end justify-center w-full h-full" style={{ paddingTop: 49, paddingLeft: 98, paddingRight: 98 }}>
-                  <img alt="Taqa" src={imgMacBookPro2} style={{ width: 345, height: 273, objectFit: "contain", display: "block" }} />
+                  <img alt="MOEI Unified Portal" src={imgMoei} className="MOEI" style={{ width: 345, height: 273, objectFit: "contain", display: "block" }} />
                 </div>
               </div>
               <div className="flex flex-col" style={{ gap: 6.585, padding: 24 }}>
                 <p style={{ ...cardText, fontWeight: 500, fontSize: 13.17, color: "rgba(250,248,247,0.6)", letterSpacing: "-0.33px", textTransform: "uppercase", lineHeight: 1, margin: "0 0 13px" }}>
-                  Enterprise · Regulatory · SaaS
+                  GOVERNMENT • DIGITAL TRANSFORMATION
                 </p>
-                <span style={{ ...cardText, fontWeight: 400, fontSize: 29.632, color: "#fff", letterSpacing: "-1.15px", lineHeight: "67px", display: "block" }}>
-                  Taqa Water Solutions
-                </span>
+                <div className="flex items-center justify-between">
+                  <span style={{ ...cardText, fontWeight: 400, fontSize: 29.632, color: "#fff", letterSpacing: "-1.15px", lineHeight: "67px", display: "block" }}>
+                    MOEI Unified Portal
+                  </span>
+                  <ReadBtn />
+                </div>
                 <p style={{ ...cardText, fontWeight: 400, fontSize: 13.17, color: "rgba(250,248,247,0.6)", letterSpacing: "-0.33px", lineHeight: "23px", margin: 0 }}>
-                  Wastewater management & compliance platform tracking DOE license conditions, reporting workflows, and operational KPIs across treatment and distribution systems.
+                  Redesigned a large-scale government service ecosystem by optimizing information architecture, application workflows, and role-based experiences for citizens, businesses, and government departments.
                 </p>
               </div>
-            </div>
+            </a>
           </div>
 
           {/* Row 2 */}

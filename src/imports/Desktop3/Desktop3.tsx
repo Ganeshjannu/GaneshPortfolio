@@ -13,6 +13,7 @@ import imgImage14 from "./ca17433acb3b5d2d08f55099d5e77de9fc155eb8.png";
 import imgImage16 from "./250d03996336c669335c43c7264dacb8c7d433e4.png";
 import imgImage17 from "./9f15350abbfe7a57ee482bcf2b6685551844b9f7.png";
 import imgImage20 from "./14d1c6ba692e5f7a1346350ef2a6df42c9a13c5a.png";
+import imgMoei from "../../../assets/images/MOEI.png";
 
 function Container1() {
   return (
@@ -692,11 +693,22 @@ function Frame29() {
     <div className="h-[359.703px] relative rounded-[32px] shrink-0 w-full" style={{ backgroundImage: "linear-gradient(108.932deg, rgb(131, 132, 134) 1.8704%, rgb(53, 52, 53) 100.02%)" }}>
       <div className="flex flex-col items-center justify-end size-full">
         <div className="content-stretch flex flex-col items-center justify-end pt-[49.387px] px-[98.774px] relative size-full">
-          <div className="h-[273px] relative shrink-0 w-[345px]" data-name="Copy of MacBook Pro mockup on textured rock stand (Mockuuups Studio)">
-            <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgCopyOfMacBookProMockupOnTexturedRockStandMockuuupsStudio} />
+          <div className="h-[273px] relative shrink-0 w-[345px]" data-name="MOEI Unified Portal">
+            <img alt="MOEI Unified Portal" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgMoei} />
           </div>
         </div>
       </div>
+    </div>
+  );
+}
+
+function FrameMOEI() {
+  return (
+    <div className="content-stretch flex items-center justify-between relative shrink-0 w-full">
+      <div className="flex flex-col font-['Bricolage_Grotesque:Regular',sans-serif] font-normal h-[44px] justify-center leading-[0] relative shrink-0 text-white text-[29.632px] text-center tracking-[-1.1524px] w-[266px]" style={{ fontVariationSettings: "'opsz' 14, 'wdth' 100" }}>
+        <p className="leading-[67px]">MOEI Unified Portal</p>
+      </div>
+      <Heading4 />
     </div>
   );
 }
@@ -707,16 +719,14 @@ function Container21() {
       <div className="content-stretch flex flex-col gap-[6.585px] items-start leading-[0] p-[24px] relative w-full">
         <div className="flex flex-col font-['Bricolage_Grotesque:Medium',sans-serif] font-medium justify-center relative shrink-0 text-[13.17px] text-[rgba(250,248,247,0.6)] tracking-[-0.3292px] uppercase whitespace-nowrap" style={{ fontVariationSettings: "'opsz' 14, 'wdth' 100" }}>
           <p className="leading-[0px]">
-            Enterprise · Regulatory · SaaS
+            GOVERNMENT • DIGITAL TRANSFORMATION
             <br aria-hidden="true" />
             <br aria-hidden="true" />
           </p>
         </div>
-        <div className="flex flex-col font-['Bricolage_Grotesque:Regular',sans-serif] font-normal h-[41px] justify-center relative shrink-0 text-[29.632px] text-center text-white tracking-[-1.1524px] w-[266px]" style={{ fontVariationSettings: "'opsz' 14, 'wdth' 100" }}>
-          <p className="leading-[67px]">Taqa Water Solutions</p>
-        </div>
+        <FrameMOEI />
         <div className="flex flex-col font-['Bricolage_Grotesque:Regular',sans-serif] font-normal justify-center min-w-full relative shrink-0 text-[13.17px] text-[rgba(250,248,247,0.6)] tracking-[-0.3292px] w-[min-content]" style={{ fontVariationSettings: "'opsz' 14, 'wdth' 100" }}>
-          <p className="leading-[23.047px]">{`Wastewater management & compliance platform tracking DOE license conditions, reporting workflows, and operational KPIs across treatment and distribution systems.`}</p>
+          <p className="leading-[23.047px]">Redesigned a large-scale government service ecosystem by optimizing information architecture, application workflows, and role-based experiences for citizens, businesses, and government departments.</p>
         </div>
       </div>
     </div>
@@ -725,10 +735,16 @@ function Container21() {
 
 function Frame28() {
   return (
-    <div className="content-stretch flex flex-col items-center relative rounded-[32.925px] shadow-[0px_1px_6px_0px_rgba(0,0,0,0.16)] shrink-0 w-[473px]">
+    <a
+      href="./assets/Case study/MOEI CASE STUDY (2).pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="content-stretch flex flex-col items-center relative rounded-[32.925px] shadow-[0px_1px_6px_0px_rgba(0,0,0,0.16)] shrink-0 w-[473px]"
+      style={{ textDecoration: "none" }}
+    >
       <Frame29 />
       <Container21 />
-    </div>
+    </a>
   );
 }
 
