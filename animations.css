@@ -191,10 +191,11 @@
 /* ─── 7. NAVBAR buttons hover ───────────────────────────*/
 
 .btn-linkedin {
-  transition: background 200ms ease, border-color 200ms ease;
+  transition: filter 200ms ease, transform 200ms ease;
 }
 .btn-linkedin:hover {
-  background: rgba(255,255,255,0.08);
+  filter: brightness(1.12);
+  transform: translateY(-1px);
 }
 
 .btn-cv {

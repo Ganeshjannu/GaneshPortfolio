@@ -109,23 +109,24 @@ a {
   display: flex;
   align-items: center;
   gap: 16px;
-  padding: 12px 24px;
+  padding: 16px 24px;
   border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  background: transparent;
+  border: none;
+  background: #ec0b43;
   cursor: pointer;
-  transition: background 200ms ease;
+  transition: filter 200ms ease, transform 200ms ease;
 }
 
 .btn-linkedin:hover {
-  background: rgba(255, 255, 255, 0.08);
+  filter: brightness(1.12);
+  transform: translateY(-1px);
 }
 
 .btn-linkedin-label {
   font-family: 'Bricolage Grotesque', sans-serif;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 14px;
-  color: #fff;
+  color: #faf8f7;
   line-height: 16.8px;
 }
 

@@ -27,11 +27,14 @@ function Navbar() {
           <img alt="Logo" className="absolute inset-0 w-full h-full object-cover" src={imgImage23} />
         </div>
         <div className="flex items-center gap-6">
-          <button
-            className="relative flex items-center gap-4 px-6 py-3 rounded-lg border"
-            style={{ borderColor: "rgba(255,255,255,0.5)" }}
+          <a
+            href="https://www.linkedin.com/in/ganesh-jannu-uxdesigner/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative flex items-center gap-4 px-6 py-4 rounded-lg"
+            style={{ background: "#ec0b43", textDecoration: "none" }}
           >
-            <span style={{ fontFamily: "'Bricolage Grotesque',sans-serif", fontWeight: 400, fontSize: 14, color: "#fff", lineHeight: "16.8px" }}>
+            <span style={{ fontFamily: "'Bricolage Grotesque',sans-serif", fontWeight: 700, fontSize: 14, color: "#faf8f7", lineHeight: "16.8px" }}>
               Linkedin
             </span>
             <div className="flex items-center justify-center" style={{ width: 20, height: 20 }}>
@@ -39,12 +42,7 @@ function Navbar() {
                 <path d={svgPaths.p142739f0} fill="white" />
               </svg>
             </div>
-          </button>
-          <button className="flex items-center justify-center px-6 py-4 rounded-lg" style={{ background: "#ec0b43" }}>
-            <span style={{ fontFamily: "'Bricolage Grotesque',sans-serif", fontWeight: 700, fontSize: 14, color: "#faf8f7", lineHeight: "16.8px" }}>
-              Download CV
-            </span>
-          </button>
+          </a>
         </div>
       </div>
     </div>

@@ -60,18 +60,18 @@ function Container2() {
 function Container() {
   return (
     <div className="content-stretch cursor-pointer flex gap-[24px] h-[72px] items-center justify-center py-[16px] relative shrink-0" data-name="Container">
-      <button className="relative rounded-[8px] shrink-0" data-name="btn">
-        <div className="content-stretch flex gap-[16px] items-center justify-center overflow-clip px-[24px] py-[12px] relative rounded-[inherit]">
-          <Container1 />
-          <Container2 />
-        </div>
-        <div aria-hidden="true" className="absolute border border-[rgba(255,255,255,0.5)] border-solid inset-0 pointer-events-none rounded-[8px]" />
-      </button>
-      <button className="bg-[#ec0b43] content-stretch flex items-center justify-center overflow-clip px-[24px] py-[16px] relative rounded-[8px] shrink-0" data-name="btn">
+      <a
+        href="https://www.linkedin.com/in/ganesh-jannu-uxdesigner/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="bg-[#ec0b43] content-stretch flex gap-[16px] items-center justify-center overflow-clip px-[24px] py-[16px] relative rounded-[8px] shrink-0"
+        style={{ textDecoration: "none" }}
+      >
         <div className="flex flex-col font-['Bricolage_Grotesque:Bold',sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[#faf8f7] text-[14px] text-left whitespace-nowrap" style={{ fontVariationSettings: "'opsz' 14, 'wdth' 100" }}>
-          <p className="leading-[16.8px]">Download CV</p>
+          <p className="leading-[16.8px]">Linkedin</p>
         </div>
-      </button>
+        <Container2 />
+      </a>
     </div>
   );
 }
@@ -681,7 +681,7 @@ function Container20() {
 
 function Frame19() {
   return (
-    <div className="content-stretch flex flex-col items-center relative rounded-[32.925px] self-stretch shadow-[0px_1px_6px_0px_rgba(0,0,0,0.16)] shrink-0 w-[703px]">
+    <div className="content-stretch flex flex-col items-center relative rounded-[32.925px] self-stretch shadow-[0px_1px_6px_0px_rgba(0,0,0,0.16)] shrink-0 w-[473px]">
       <Frame17 />
       <Container20 />
     </div>
@@ -739,7 +739,7 @@ function Frame28() {
       href="./assets/Case study/MOEI CASE STUDY (2).pdf"
       target="_blank"
       rel="noopener noreferrer"
-      className="content-stretch flex flex-col items-center relative rounded-[32.925px] shadow-[0px_1px_6px_0px_rgba(0,0,0,0.16)] shrink-0 w-[473px]"
+      className="content-stretch flex flex-col items-center relative rounded-[32.925px] shadow-[0px_1px_6px_0px_rgba(0,0,0,0.16)] shrink-0 w-[703px]"
       style={{ textDecoration: "none" }}
     >
       <Frame29 />
@@ -751,8 +751,8 @@ function Frame28() {
 function Frame18() {
   return (
     <div className="content-stretch flex gap-[24px] items-start relative shrink-0 w-full">
-      <Frame19 />
       <Frame28 />
+      <Frame19 />
     </div>
   );
 }
