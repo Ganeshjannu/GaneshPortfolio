@@ -204,13 +204,13 @@ a {
   flex-direction: column;
   flex-shrink: 0;
   width: 578px;
-  gap: 16px;
+  gap: 32px;
 }
 
 .hero-title-group {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 12px;
 }
 
 .hero-hi {
@@ -224,9 +224,9 @@ a {
 .hero-name {
   font-family: 'Bricolage Grotesque', sans-serif;
   font-weight: 400;
-  font-size: 72px;
+  font-size: 78px;
   color: #ec0b43;
-  letter-spacing: -3.6px;
+  letter-spacing: -3.9px;
   line-height: normal;
   margin: 0;
   font-variation-settings: 'opsz' 14, 'wdth' 100;
@@ -288,43 +288,151 @@ a {
 .hero-right {
   position: relative;
   flex-shrink: 0;
-  width: 426px;
-  height: 544px;
+  width: 388px;
+  height: 495px;
 }
 
 .hero-img-luminosity {
   position: absolute;
   inset: 0;
-  width: 426px;
-  height: 544px;
-  border-radius: 205px;
+  width: 388px;
+  height: 495px;
+  border-radius: 186px;
   mix-blend-mode: luminosity;
 }
 
 .hero-img-bg {
-  border-radius: 205px;
+  border-radius: 186px;
   opacity: 0.1;
 }
 
 .hero-img-main {
   position: absolute;
-  left: 26px;
-  top: 33px;
-  width: 374px;
-  height: 478px;
+  left: 24px;
+  top: 30px;
+  width: 340px;
+  height: 435px;
 }
 
 .hero-img-photo {
-  border-radius: 205px 205px 205px 187px;
+  border-radius: 186px 186px 186px 170px;
   backdrop-filter: blur(25px);
 }
 
 .hero-img-border {
   position: absolute;
   inset: 0;
-  border-radius: 205px 205px 205px 187px;
+  border-radius: 186px 186px 186px 170px;
   border: 1px solid #383051;
   pointer-events: none;
+}
+
+/* Quick Info Chips */
+.hero-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 12px;
+  margin-top: 8px;
+}
+
+.chip-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #f5f1ef;
+  border: 1px solid #e2dedc;
+  padding: 8px 16px;
+  border-radius: 100px;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #120e1e;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: default;
+}
+
+.chip-item:hover {
+  background: rgba(236, 11, 67, 0.05);
+  border-color: rgba(236, 11, 67, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Primary Action Button */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 28px;
+  background: #ec0b43;
+  color: #faf8f7;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  border-radius: 8px;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  border: none;
+  width: fit-content;
+}
+
+.btn-primary:hover {
+  background: #d00a3b;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(236, 11, 67, 0.2);
+}
+
+.btn-primary .btn-icon-wrap {
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-primary:hover .btn-icon-wrap {
+  transform: translateX(4px);
+}
+
+/* Bottom Scroll Indicator */
+.hero-scroll-indicator {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.scroll-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(18, 14, 30, 0.4);
+  transition: color 0.25s ease;
+}
+
+.scroll-link:hover {
+  color: #ec0b43;
+}
+
+.scroll-arrow {
+  font-size: 16px;
+  animation: bounce 2s infinite;
+  display: inline-block;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-6px);
+  }
+  60% {
+    transform: translateY(-3px);
+  }
 }
 
 
@@ -1410,8 +1518,8 @@ a {
   }
 
   .hero-name {
-    font-size: 52px;
-    letter-spacing: -2px;
+    font-size: 56px;
+    letter-spacing: -2.2px;
   }
 
   .hero-role,
@@ -1421,21 +1529,25 @@ a {
     letter-spacing: -1px;
   }
 
+  .hero-chips {
+    justify-content: center;
+  }
+
   .hero-right {
-    width: 300px;
-    height: 380px;
+    width: 273px;
+    height: 346px;
   }
 
   .hero-img-luminosity {
-    width: 300px;
-    height: 380px;
+    width: 273px;
+    height: 346px;
   }
 
   .hero-img-main {
-    width: 260px;
-    height: 330px;
-    left: 20px;
-    top: 25px;
+    width: 236px;
+    height: 300px;
+    left: 18px;
+    top: 23px;
   }
 
 
