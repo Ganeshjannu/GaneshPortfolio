@@ -83,12 +83,12 @@ a {
   max-width: 1200px;
   margin: 0 auto;
   height: 76px;
-  background: #212121;
+  background: #000000;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 16px 24px;
-  border-radius: 16px; 
+  border-radius: 20px; 
 }
 
 .navbar-logo {
@@ -108,17 +108,18 @@ a {
   position: relative;
   display: flex;
   align-items: center;
-  gap: 16px;
-  padding: 16px 24px;
+  gap: 10px;
+  padding: 10px 20px;
   border-radius: 8px;
-  border: none;
-  background: #ec0b43;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: transparent;
   cursor: pointer;
-  transition: filter 200ms ease, transform 200ms ease;
+  transition: background-color 200ms ease, border-color 200ms ease, transform 200ms ease;
 }
 
 .btn-linkedin:hover {
-  filter: brightness(1.12);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.4);
   transform: translateY(-1px);
 }
 
@@ -127,32 +128,33 @@ a {
   font-weight: 700;
   font-size: 14px;
   color: #faf8f7;
-  line-height: 16.8px;
+  line-height: normal;
 }
 
 .btn-icon-wrap {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 20px;
-  height: 20px;
+  width: 14px;
+  height: 14px;
 }
 
 .btn-cv {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 16px 24px;
+  padding: 10px 20px;
   border-radius: 8px;
   background: #ec0b43;
   border: none;
   cursor: pointer;
-  transition: filter 200ms ease, transform 200ms ease;
+  transition: background-color 200ms ease, transform 200ms ease, box-shadow 200ms ease;
 }
 
 .btn-cv:hover {
-  filter: brightness(1.12);
+  background: #d00a3b;
   transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(236, 11, 67, 0.15);
 }
 
 .btn-cv-label {
@@ -160,7 +162,7 @@ a {
   font-weight: 700;
   font-size: 14px;
   color: #faf8f7;
-  line-height: 16.8px;
+  line-height: normal;
 }
 
 
@@ -214,11 +216,12 @@ a {
 }
 
 .hero-hi {
-  font-family: 'Savoye LET', cursive;
-  font-size: 24px;
+  font-family: 'Savoye LET', 'Savoye LET Plain', 'Savoye LET Regular', 'SavoyeLETPlain', cursive;
+  font-size: 38px;
   color: #120e1e;
   line-height: normal;
   margin: 0;
+  font-weight: normal;
 }
 
 .hero-name {
@@ -234,23 +237,25 @@ a {
 
 .hero-role {
   font-family: 'Bricolage Grotesque', sans-serif;
-  font-weight: 400;
-  font-size: 48px;
-  color: #ec0b43;
-  letter-spacing: -2.4px;
-  line-height: 57.6px;
-  margin: 0;
+  font-weight: 700;
+  font-size: 28px;
+  color: #120e1e;
+  letter-spacing: -1px;
+  line-height: normal;
+  margin: 4px 0 8px;
   font-variation-settings: 'opsz' 14, 'wdth' 100;
 }
 
 .hero-tagline {
   font-family: 'Bricolage Grotesque', sans-serif;
-  font-size: 48px;
+  font-size: 26px;
+  font-weight: 400;
   color: #120e1e;
-  letter-spacing: -2.4px;
-  line-height: 57.6px;
+  letter-spacing: -0.8px;
+  line-height: 38px;
   margin: 0;
   width: 100%;
+  max-width: 540px;
 }
 
 .tagline-light {
@@ -288,43 +293,19 @@ a {
 .hero-right {
   position: relative;
   flex-shrink: 0;
-  width: 388px;
-  height: 495px;
-}
-
-.hero-img-luminosity {
-  position: absolute;
-  inset: 0;
-  width: 388px;
-  height: 495px;
-  border-radius: 186px;
-  mix-blend-mode: luminosity;
-}
-
-.hero-img-bg {
-  border-radius: 186px;
-  opacity: 0.1;
-}
-
-.hero-img-main {
-  position: absolute;
-  left: 24px;
-  top: 30px;
-  width: 340px;
-  height: 435px;
+  width: 440px;
+  height: 440px;
+  border-radius: 40px;
+  overflow: hidden;
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.12);
+  background: #111;
 }
 
 .hero-img-photo {
-  border-radius: 186px 186px 186px 170px;
-  backdrop-filter: blur(25px);
-}
-
-.hero-img-border {
-  position: absolute;
-  inset: 0;
-  border-radius: 186px 186px 186px 170px;
-  border: 1px solid #383051;
-  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 /* Quick Info Chips */
@@ -446,7 +427,7 @@ a {
 }
 
 .section-label-script {
-  font-family: 'Savoye LET', cursive;
+  font-family: 'Savoye LET', 'Savoye LET Plain', 'Savoye LET Regular', 'SavoyeLETPlain', cursive;
   font-size: 24px;
   color: #120e1e;
   line-height: normal;
@@ -1558,20 +1539,10 @@ a {
   }
 
   .hero-right {
-    width: 273px;
-    height: 346px;
-  }
-
-  .hero-img-luminosity {
-    width: 273px;
-    height: 346px;
-  }
-
-  .hero-img-main {
-    width: 236px;
-    height: 300px;
-    left: 18px;
-    top: 23px;
+    width: 320px;
+    height: 320px;
+    max-width: 90vw;
+    border-radius: 32px;
   }
 
 
